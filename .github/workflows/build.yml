@@ -60,5 +60,5 @@ jobs:
             sudo docker pull ${{secrets.DOCKERHUB_USERNAME}}/eureka-server
             sudo docker stop eureka
             sudo docker container rm eureka
-            sudo docker run -dit -p 8761:8761 --name eureka ${{secrets.DOCKERHUB_USERNAME}}/eureka-server
+             docker run -dit -p 8761:8761 --network server --name eureka ${{secrets.DOCKERHUB_USERNAME}}/eureka-server
             sudo docker image prune -f
