@@ -35,10 +35,10 @@ jobs:
 
 
      - name: Create Docker image
-       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/imageName .
+       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/eureka-server .
 
      - name: Push Docker image
-       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/imageName
+       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/eureka-server
 
  # deploy:
  #   name: Run
